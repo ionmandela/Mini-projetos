@@ -2,6 +2,9 @@
 using namespace std;
 
 int main(){
-    int a;
+    setlocale(LC_ALL, "portuguese");
+    cout << "=============================================================" << endl;
+    cout << "CALCULADORA - SOMA, PRODUTO, RAZAO E "
+    
     return 0;
 }
