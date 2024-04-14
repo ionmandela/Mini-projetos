@@ -1,3 +1,3 @@
-# Mini-projetos
+# Calculadora simples de adição, subtração, divisão e multiplicação
 
-Repositório dedicado para arquivar mini projetos em diversas linguagens.
+Feita em c++.
