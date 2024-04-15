@@ -8,6 +8,7 @@ using namespace std;
 void funInicio();
 void funComoUsar();
 void funOpErro();
+void operacao();
 
 int main(){
     SetConsoleOutputCP(CP_UTF8);
@@ -30,7 +31,7 @@ int main(){
             }
             //OPERAÇÃO
             if(op == 2){
-
+                void operacao();
             }
             //SAIR DA CALCULADORA
             if(op == 3){
@@ -55,14 +56,22 @@ void funInicio(){
 
 void funComoUsar(){
     system("cls");
-    cout << "=============================================================" << endl;
+    cout << "=========================================================================================================" << endl;
+    cout << "Digite os números que quiser e use os sinais operatórios: " << endl;
     cout << "Use o + para adição " << endl;
     cout << "Use o - para subtração " << endl;
     cout << "Use o x para multiplicação " << endl;
     cout << "Use o / para divisão " << endl;
-    cout << "=============================================================" << endl;
+    cout << "=========================================================================================================" << endl;
+    cout << "Digitação de expressão: " << endl;
+    cout << "Exemplo: " << " se digitar uma expressão do tipo 2+3/4, o programa irá seguir as ordens de operação." << endl;
+    cout << "Sendo elas por prioridade: " << endl;
+    cout << "\n 1° - ( ) parênteses \n 2° - [ ] colchetes \n 3° - { } chaves";
+    cout << "\n 4° - multiplicação e divisão \n 5° - adição e subtração \n" << endl;
+    cout << "Ao terminar de escrever sua expressão, aperte 'enter' do teclado para obter o resultado. " << endl;
+    cout << "=========================================================================================================" << endl;
     cout << "1 - voltar  " << "2 - Sair  " << endl;
-    cout << "=============================================================" << endl;
+    cout << "=========================================================================================================" << endl;
     cout << "Digite a opção desejada: " << endl;
 }
 
@@ -71,4 +80,8 @@ void funOpErro(){
     cout << "=============ERRO-DIGITE-UMA-OPÇÃO-VÁLIDA================" << endl;
     cout << "1 - Como usar a calculadora  " << "2 - Operar  "<< "3 - Sair  " << endl;
     cout << "=============================================================" << endl;
+}
+
+void operacao(){
+
 }
