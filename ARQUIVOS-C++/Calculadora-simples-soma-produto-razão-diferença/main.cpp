@@ -7,12 +7,15 @@ using namespace std;
 
 void funInicio();
 void funComoUsar();
-void operacao();
+void inOperacao();
+void operacoes();
+void fimOperacao();
 
 int main(){
     SetConsoleOutputCP(CP_UTF8);
-    int op;
-    char es;
+    int op, resultado;
+    char es, op2;
+    char operacao[100000];
 
     while(true){
         funInicio();
@@ -32,7 +35,18 @@ int main(){
             //OPERAÇÃO
             if(op == 2){
                 do{
-                    operacao();
+                    inOperacao();
+                    operacoes();
+                    do{
+                        system("cls");
+                        cout << "RESULTADO: " << endl;
+                        fimOperacao();
+                        cin >> op2;
+                        if(op2 == 'S' || op2 == 's'){
+                            exit(EXIT_SUCCESS);
+                        } else{break;}
+                    }while(true);
+                    
                     
                 }while(true);
             }
@@ -78,11 +92,20 @@ void funComoUsar(){
     cout << "Digite a opção desejada: " << endl;
 }
 
-void operacao(){
+void inOperacao(){
     system("cls");
-    cout << "=========================================================================================================" << endl;
-    cout << "Digite S para voltar e Y para sair.";
-    cout << "=========================================================================================================" << endl;
-    cout << "Apenas digite números para espressão!" << endl;
-    cout << "Operação: ";
+    cout << "================================================================================================" << endl;
+    cout << "Expressões somente numéricas!" << endl;
+    cout << "================================================================================================" << endl;
+    cout << "Operação: " << endl;
+}
+
+void operacoes(){
+
+}
+
+void fimOperacao(){
+    cout << "================================================================================================" << endl;
+    cout << "Digite S para sair ou qualquer letra para fazer uma nova operação." << endl;
+    cout << "================================================================================================" << endl;
 }
