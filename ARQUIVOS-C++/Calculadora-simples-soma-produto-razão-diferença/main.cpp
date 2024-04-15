@@ -7,7 +7,7 @@ using namespace std;
 void funInicio();
 void funComoUsar();
 void inOperacao();
-void operacoes();
+void operacoes(char operacaoC[100000]);
 void fimOperacao();
 
 int main(){
@@ -35,7 +35,7 @@ int main(){
             if(op == 2){
                 do{
                     inOperacao();
-                    operacoes();
+                    operacoes(operacao);
                     do{
                         system("cls");
                         cout << "RESULTADO: " << endl;
@@ -99,8 +99,20 @@ void inOperacao(){
     cout << "Operação: " << endl;
 }
 
-void operacoes(){
-
+void operacoes(char operacaoC[100000]) {
+    int i = 0;
+    char ch;
+    
+    while (true) {
+        ch = getche(); // Lê um caractere sem pressionar Enter
+        if (ch == '=') {
+            operacaoC[i] = '\0'; // Adiciona o terminador nulo para indicar o fim da string
+            break; // Sai do loop quando encontrar o caractere '='
+        } else {
+            operacaoC[i] = ch; // Armazena o caractere na string
+            i++;
+        }
+    }
 }
 
 void fimOperacao(){
