@@ -11,52 +11,43 @@ void funOpErro();
 
 int main(){
     SetConsoleOutputCP(CP_UTF8);
-    int opcao, opcao2;
+    int op;
 
-    do{
-        system("cls");
+    while(true){
         funInicio();
-        cin >> opcao;
-        if(opcao == 1 || opcao == 2 || opcao == 3){
-            if(opcao == 3){exit(EXIT_SUCCESS);}
-            else if(opcao == 1){
+        cin >> op;
+        if(op == 1 || op == 2 || op == 3){
+            
+            //COMO FUNCIONA A CALCULADORA
+            if(op == 1){
+                do{
                 funComoUsar();
-                cin >> opcao2;
-                    if(opcao2 == 1 || opcao2 == 2){
-                        if(opcao2 == 1){}
-                        if(opcao2 == 2){exit(EXIT_SUCCESS);}
-                    }
-                    else{
-                        while(opcao2!=1 || opcao2!=2){
-                            funOpErro();
-                            cin >> opcao2;
-                        }
-                    }
+                cin >> op;
+                if(op == 2){exit(EXIT_SUCCESS);}
+                system("cls");
+                }while(op != 1);
+                system("cls");
+            }
+            //OPERAÇÃO
+            if(op == 2){
+
+            }
+            //SAIR DA CALCULADORA
+            if(op == 3){
+                exit(EXIT_SUCCESS);
             }
         }
         else{
-            while(opcao2!=1 && opcao2!=2){
-                funOpErro();
-                cin >> opcao2;
-            }
+            system("cls");
         }
 
-
-    }while(true);
-
+    }
     return 0;
-}
-
-void funOpErro(){
-    system("cls");
-    cout << "=============ERRO-DIGITE-UMA-OPÇÃO-VÁLIDA================" << endl;
-    cout << "1 - voltar  " << "2 - Sair  " << endl;
-    cout << "=============================================================" << endl;
 }
 
 void funInicio(){
     cout << "=============================================================" << endl;
-    cout << "CALCULADORA - SOMA, DIFERENÇA, PRODUTO E RAZÃO " << endl;
+    cout << "CALCULADORA - SOMA, DIFERENÇA, PRODUTO E RAZÃO: " << endl;
     cout << "1 - Como usar a calculadora  " << "2 - Operar  "<< "3 - Sair  " << endl;
     cout << "=============================================================" << endl;
     cout << "Digite a opção desejada: ";
@@ -73,4 +64,11 @@ void funComoUsar(){
     cout << "1 - voltar  " << "2 - Sair  " << endl;
     cout << "=============================================================" << endl;
     cout << "Digite a opção desejada: " << endl;
+}
+
+void funOpErro(){
+    system("cls");
+    cout << "=============ERRO-DIGITE-UMA-OPÇÃO-VÁLIDA================" << endl;
+    cout << "1 - Como usar a calculadora  " << "2 - Operar  "<< "3 - Sair  " << endl;
+    cout << "=============================================================" << endl;
 }
