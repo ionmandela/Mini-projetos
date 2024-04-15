@@ -7,7 +7,6 @@ using namespace std;
 
 void funInicio();
 void funComoUsar();
-void funOpErro();
 void operacao();
 
 int main(){
@@ -73,13 +72,6 @@ void funComoUsar(){
     cout << "1 - voltar  " << "2 - Sair  " << endl;
     cout << "=========================================================================================================" << endl;
     cout << "Digite a opção desejada: " << endl;
-}
-
-void funOpErro(){
-    system("cls");
-    cout << "=============ERRO-DIGITE-UMA-OPÇÃO-VÁLIDA================" << endl;
-    cout << "1 - Como usar a calculadora  " << "2 - Operar  "<< "3 - Sair  " << endl;
-    cout << "=============================================================" << endl;
 }
 
 void operacao(){
