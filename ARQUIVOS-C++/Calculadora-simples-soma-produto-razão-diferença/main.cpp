@@ -1,7 +1,6 @@
 #include <iostream>
+#include <conio.h>
 #include <iomanip>
-#include <stdlib.h>
-#include <cstdlib>
 #include <windows.h>
 using namespace std;
 
@@ -19,14 +18,14 @@ int main(){
 
     while(true){
         funInicio();
-        cin >> op;
+        op = getche() - '0';
         if(op == 1 || op == 2 || op == 3){
 
             //COMO FUNCIONA A CALCULADORA
             if(op == 1){
                 do{
                 funComoUsar();
-                cin >> op;
+                op = getche() - '0';
                 if(op == 2){exit(EXIT_SUCCESS);}
                 system("cls");
                 }while(op != 1);
@@ -41,7 +40,7 @@ int main(){
                         system("cls");
                         cout << "RESULTADO: " << endl;
                         fimOperacao();
-                        cin >> op2;
+                        op2 = getche();
                         if(op2 == 'S' || op2 == 's'){
                             exit(EXIT_SUCCESS);
                         } else{break;}
