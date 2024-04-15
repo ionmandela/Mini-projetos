@@ -12,12 +12,13 @@ void operacao();
 int main(){
     SetConsoleOutputCP(CP_UTF8);
     int op;
+    char es;
 
     while(true){
         funInicio();
         cin >> op;
         if(op == 1 || op == 2 || op == 3){
-            
+
             //COMO FUNCIONA A CALCULADORA
             if(op == 1){
                 do{
@@ -30,7 +31,10 @@ int main(){
             }
             //OPERAÇÃO
             if(op == 2){
-                void operacao();
+                do{
+                    operacao();
+                    
+                }while(true);
             }
             //SAIR DA CALCULADORA
             if(op == 3){
@@ -75,5 +79,10 @@ void funComoUsar(){
 }
 
 void operacao(){
-
+    system("cls");
+    cout << "=========================================================================================================" << endl;
+    cout << "Digite S para voltar e Y para sair.";
+    cout << "=========================================================================================================" << endl;
+    cout << "Apenas digite números para espressão!" << endl;
+    cout << "Operação: ";
 }
