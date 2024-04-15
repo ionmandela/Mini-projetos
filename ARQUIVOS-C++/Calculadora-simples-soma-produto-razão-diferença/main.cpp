@@ -7,6 +7,7 @@ using namespace std;
 
 void funInicio();
 void funComoUsar();
+void funOpErro();
 
 int main(){
     SetConsoleOutputCP(CP_UTF8);
@@ -24,12 +25,19 @@ int main(){
                     if(opcao2 == 1 || opcao2 == 2){
                         if(opcao2 == 1){}
                         if(opcao2 == 2){exit(EXIT_SUCCESS);}
-                            else{
-                            cout << "=============ERRO-DIGITE-UMA-OPÇÃO-VÁLIDA================" << endl;
-                            cout << "1 - voltar  " << "2 - Sair  " << endl;
-                            cout << "=============================================================" << endl;
+                    }
+                    else{
+                        while(opcao2!=1 || opcao2!=2){
+                            funOpErro();
+                            cin >> opcao2;
                         }
                     }
+            }
+        }
+        else{
+            while(opcao2!=1 && opcao2!=2){
+                funOpErro();
+                cin >> opcao2;
             }
         }
 
@@ -37,6 +45,13 @@ int main(){
     }while(true);
 
     return 0;
+}
+
+void funOpErro(){
+    system("cls");
+    cout << "=============ERRO-DIGITE-UMA-OPÇÃO-VÁLIDA================" << endl;
+    cout << "1 - voltar  " << "2 - Sair  " << endl;
+    cout << "=============================================================" << endl;
 }
 
 void funInicio(){
@@ -52,7 +67,7 @@ void funComoUsar(){
     cout << "=============================================================" << endl;
     cout << "Use o + para adição " << endl;
     cout << "Use o - para subtração " << endl;
-    cout << "Use o * para multiplicação " << endl;
+    cout << "Use o x para multiplicação " << endl;
     cout << "Use o / para divisão " << endl;
     cout << "=============================================================" << endl;
     cout << "1 - voltar  " << "2 - Sair  " << endl;
